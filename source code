@@ -1,0 +1,317 @@
+/*
+Mini project UNIT CONVERTER
+Name: VIBHU KAUSHIK   
+REG NO: RA2111003011711
+*/
+#include <stdio.h> // preprocessor directive
+#include <stdlib.h>
+int main()         // main function
+{
+  // Declaration  of variables
+  char category; // character variable
+
+  int tempChoice; /*  integer variable   */
+  int currencyChoice;
+  int massChoice;
+
+  // Printing
+  printf("Welcome to Unit Converter! \n");
+  printf("Here is a list of conversation to choose from: "
+         "Temperature(T),Currency(C),Mass(M) \n");
+  printf("Please enter the letter you want to convert.\n");
+
+  // input of category
+  scanf("%c", &category);
+
+  if (category == 'T') {
+    printf("Welcome to Temperature Converter! \n");
+    printf("Here is a list of conversations to choose from: \n");
+    // Giving Choices to the user
+    printf("Enter 1 for Celsius to Kelvin. \n");
+    printf("Enter 2 for Kelvin to Celcius. \n");
+    printf("Enter 3 for Fahrenhiet to Kelvin. \n");
+    printf("Enter 4 for Kelvin to Fahrenhiet. \n");
+    printf("Enter 5 for Rankien to Kelvin. \n");
+    printf("Enter 6 for Kelvin to Rankien. \n");
+    printf("Enter 7 for Reamur to Kelvin. \n");
+    printf("Enter 8 for Kelvin to Reamur. \n");
+    printf("Enter 9 for Triple point of water to Kelvin . \n");
+    printf("Enter 10 for Kelvin to Triple point of water . \n");
+    //  input of the choice
+    scanf("%d", &tempChoice);
+
+    if (tempChoice == 1) 
+    {
+      printf("Conversion From Celcius To Kelvin \n");
+      float Cel, kelvin;
+      printf("Enter Temperature in Celcius \n");
+      scanf("%f", &Cel);
+      // conversion from celcius to kelvin
+      kelvin = Cel + 273.15;
+      printf(" Required Temperature : \n");
+      printf("%0.3f", kelvin);
+    }
+    else if (tempChoice == 2)
+    {
+      printf("Conversion From kelvin to Celcius \n");
+      float Cel, kelvin;
+      printf("Enter Temperature in Kelvin \n");
+      scanf("%f", &kelvin);
+      // conversion from kelvin to Celcius
+      Cel = kelvin - 273.15;
+      printf(" Required Temperature : \n");
+      printf("%0.3f", Cel);
+    }
+    else if (tempChoice == 3)
+    {
+      printf("Conversion From fahrenhiet to kelvin \n");
+      float Fah, kelvin;
+       printf("Enter Temperature in Fahrenhiet \n");
+      scanf("%f", &Fah);
+      // conversion from fahrenhiet to kelvin
+      kelvin = 5.0 / 9.0 * (Fah + 459.67);
+      printf(" Required Temperature : \n");
+      printf("%0.3f", kelvin);
+    } 
+    else if (tempChoice == 4) 
+    {
+      printf("Conversion From kelvin to fahrenhiet \n");
+      float Fah, kelvin;
+       printf("Enter Temperature in Kelvin \n");
+      scanf("%f", &kelvin);
+      // conversion from kelvin to fahrenhiet
+      Fah = 9.0 / 5.0 * (kelvin - 459.67);
+      printf(" Required Temperature : \n");
+      printf("%0.3f", Fah);
+    } 
+    else if (tempChoice == 5) 
+    {
+      printf("Conversion From Rankien to kelvin \n");
+      float Ran, kelvin;
+       printf("Enter Temperature in Rankien \n");
+      scanf("%f", &Ran);
+      // conversion from Rankien to kelvin
+      kelvin = Ran * 0.5555555556;
+      printf(" Required Temperature : \n");
+      printf("%0.3f", kelvin);
+    }
+    else if (tempChoice == 6) 
+    {
+      printf("Conversion From kelvin to Rankien \n");
+      float Ran, kelvin;
+       printf("Enter Temperature in Kelvin \n");
+      scanf("%f", &kelvin);
+      // conversion from kelvin to Rankien
+      Ran = kelvin / 0.5555555556;
+      printf(" Required Temperature : \n");
+      printf("%0.3f", Ran);
+    }
+    else if (tempChoice == 7) 
+    {
+      printf("Conversion From Reamur to kelvin \n");
+      float Rea, kelvin;
+       printf("Enter Temperature in Reamur \n");
+      scanf("%f", &Rea);
+      // conversion from Reamur to kelvin
+      kelvin = Rea * 274.4;
+      printf(" Required Temperature : \n");
+      printf("%0.3f", kelvin);
+    } 
+    else if (tempChoice == 8) 
+    {
+      printf("Conversion From kelvin to Reamur \n");
+      float Rea, kelvin;
+       printf("Enter Temperature in Kelvin \n");
+      scanf("%f", &kelvin);
+      // conversion from kelvin to Reamur
+      Rea = kelvin / 274.4;
+      printf(" Required Temperature : \n");
+      printf("%0.3f", Rea);
+    } 
+    else if (tempChoice == 9) 
+    {
+      printf("Conversion From  Triple point of water to kelvin  \n");
+      float Trip, kelvin;
+       printf("Enter Temperature in Triple point of water \n");
+      scanf("%f", &Trip);
+      // conversion from Triple point of water to kelvin
+      kelvin = Trip * 273.16;
+      printf(" Required Temperature : \n");
+      printf("%0.3f", kelvin);
+    } 
+    else if (tempChoice == 10)
+    {
+      printf("Conversion From Kelvin to Triple point of water  \n");
+      float Trip, kelvin;
+       printf("Enter Temperature in Kelvin \n");
+      scanf("%f", &kelvin);
+      // conversion from Kelvin to Triple point of water
+      Trip = kelvin / 273.16;
+      printf(" Required Temperature : \n");
+      printf("%0.3f", Trip);
+    }
+  }
+
+  else if (category == 'C') 
+  {
+    printf("Welcome to Currency Converter! \n");
+    printf("Here is a list of conversations to choose from: \n");
+    printf("Enter 1 for EURO to USD. \n");
+    printf("Enter 2 for USD to Euro. \n");
+    printf("Enter 3 for INR to USD. \n");
+    printf("Enter 4 for USD to INR. \n");
+    printf("Enter 5 for AUD to USD. \n");
+    printf("Enter 6 for USD TO AUD. \n");
+    scanf("%d", &currencyChoice);
+
+    if (currencyChoice == 1)
+    {
+      printf("Conversion From EURO to USD \n");
+      float Euro, USD;
+      printf("Enter Currency in Euro \n");
+      scanf("%f", &Euro);
+      // conversion from  EURO to USD
+      USD = Euro * 1.0811897845;
+      printf("Required Currency \n");
+      printf("%0.3f", USD);
+    }
+    else if (currencyChoice == 2)
+    {
+      printf("Conversion From USD to EURO \n");
+      float Euro, USD;
+      printf("Enter Currency in USD \n");
+      scanf("%f", &USD);
+      // conversion from  USD to Euro
+      Euro = USD / 1.0811897845;
+      printf("Required Currency \n");
+      printf("%0.3f", Euro);
+    }
+    else if (currencyChoice == 3)
+    {
+      printf("Conversion From INR to USD \n");
+      float INR, USD;
+      printf("Enter Currency in INR \n");
+      scanf("%f", &INR);
+      // conversion from  INR to USD
+      USD = INR * 0.0131007342;
+      printf("Required Currency \n");
+      printf("%0.3f", USD);
+    }
+    else if (currencyChoice == 4)
+    {
+      printf("Conversion From USD to INR \n\n");
+      float INR, USD;
+      printf("Enter Currency in USD \n");
+      scanf("%f", &USD);
+      // conversion from  USD to INR
+      INR = USD / 0.0131007342;
+      printf("Required Currency \n");
+      printf("%0.3f", INR);
+    }
+    else if (currencyChoice == 5) 
+    {
+      printf("Conversion From AUD to USD \n");
+      float AUD, USD;
+      printf("Enter Currency in AUD \n");
+      scanf("%f", &AUD);
+      // conversion from  AUD to USD
+      USD = AUD * 0.7394201911;
+      printf("Required Currency \n");
+      printf("%0.3f", USD);
+    } 
+    else if (currencyChoice == 6) 
+    {
+      printf("Conversion From USD to AUD \n");
+      float AUD, USD;
+      printf("Enter Currency in USD \n");
+      scanf("%f", &USD);
+      // conversion from  USD to AUD
+      AUD = USD / 0.7394201911;
+      printf("Required Currency \n");
+      printf("%0.3f", AUD);
+    }
+  }
+
+  else if (category == 'M') 
+  {
+    printf("Welcome to Mass Converter! \n");
+    printf("Here is a list of conversations to choose from: \n");
+    printf("Enter 1 for Gram to Kilo . \n");
+    printf("Enter 2 for Kilo to Gram . \n");
+    printf("Enter 3 for Ton to Kilo. \n");
+    printf("Enter 4 for Kilo to Ton. \n");
+    printf("Enter 5 for Pounds to Kilo. \n");
+    printf("Enter 6 for Kilo to Pounds. \n");
+    scanf("%d", &massChoice);
+
+    if (massChoice == 1) 
+    {
+      printf("Conversion From Gram to Kilo \n");
+      float kilo, gram;
+      printf("Enter Mass in Grams  \n");
+      scanf("%f", &gram);
+      // conversion from gram to kilo
+      kilo = gram * 0.001;
+      printf("Required Mass \n");
+      printf("%0.3f", kilo);
+    }
+    else if (massChoice == 2) 
+    {
+      printf("Conversion From Kilo to Gram \n");
+      float kilo, gram;
+      printf("Enter Mass in Kilo  \n");
+      scanf("%f", &kilo);
+      // conversion from kilo to gram
+      gram = kilo / 0.001;
+      printf("Required Mass \n");
+      printf("%0.3f", gram);
+    }
+    else if (massChoice == 3) 
+    {
+      printf("Conversion From Ton to Kilo \n");
+      float kilo, ton;
+      printf("Enter Mass in Ton  \n");
+      scanf("%f", &ton);
+      // conversion from ton to kilo
+      kilo = ton * 1000;
+      printf("Required Mass \n");
+      printf("%0.3f", kilo);
+    }
+    else if (massChoice == 4) 
+    {
+      printf("Conversion From Kilo to Ton \n");
+      float kilo, ton;
+      printf("Enter Mass in Kilo  \n");
+      scanf("%f", &kilo);
+      // conversion from kilo to ton
+      ton = kilo / 1000;
+      printf("Required Mass \n");
+      printf("%0.3f", ton);
+    }
+    else if (massChoice == 5) 
+    {
+      printf("Conversion From Pounds to Kilo \n");
+      float kilo, pounds;
+      printf("Enter Mass in Pounds  \n");
+      scanf("%f", &pounds);
+      // conversion from pounds to kilo
+      kilo = pounds * 0.45359237;
+      printf("Required Mass \n");
+      printf("%0.3f", kilo);
+    }
+    else if (massChoice == 6) 
+    {
+      printf("Conversion From Kilo to Pounds \n");
+      float kilo, pounds;
+      printf("Enter Mass in Kilo  \n");
+      scanf("%f", &kilo);
+      // conversion from kilo to pounds
+      pounds = kilo / 0.45359237;
+      printf("Required Mass \n");
+      printf("%0.3f", pounds);
+    }
+  }
+  printf("\nThanks for using Unit converter \n\n");
+  exit(0);
+  return 0;
+}
